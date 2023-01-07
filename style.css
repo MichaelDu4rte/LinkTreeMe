@@ -15,8 +15,8 @@ body::before {
   pointer-events: none;
   background: url("images/bg.webp") no-repeat center;
   background-size: cover;
-  -webkit-animation: backgroundZoom 20s forwards;
-          animation: backgroundZoom 20s forwards;
+  -webkit-animation: backgroundZoom 59s forwards;
+          animation: backgroundZoom 59s forwards;
 }
 
 @-webkit-keyframes backgroundZoom {
@@ -51,17 +51,50 @@ body::before {
 }
 @media screen and (max-width: 768px) {
   .profie {
-    width: auto;
+    width: 500px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .profie {
+    width: 500px;
+    height: 700px;
+  }
+}
+@media screen and (max-height: 600px) {
+  .profie {
+    width: 500px;
+    height: 700px;
+  }
+}
+@media screen and (max-height: 768px) {
+  .profie {
+    width: 500px;
+    height: 500px;
   }
 }
 .profie-avatar img {
   margin: auto;
   width: 100%;
-  height: 100% px;
+  height: 100%;
   border-radius: 70%;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0 10px 60px -5px rgba(25, 37, 25, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .profie-avatar img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+  }
+}
+@media screen and (max-height: 768px) {
+  .profie-avatar img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+  }
 }
 .profie-desc {
   text-align: center;
@@ -75,6 +108,16 @@ body::before {
 }
 .profie-desc h1 + div {
   font-size: 13px;
+}
+@media screen and (max-width: 768px) {
+  .profie-desc h1 + div {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-height: 768px) {
+  .profie-desc h1 + div {
+    font-size: 1rem;
+  }
 }
 .profie-info {
   display: flex;
@@ -103,9 +146,14 @@ body::before {
   font-size: 1rem;
   opacity: 0.8;
 }
-@media screen and (min-width: 800px) {
-  .profie-info > div {
-    font-size: 1rem;
+@media screen and (max-width: 768px) {
+  .profie-info > div > *:last-child {
+    font-size: 12px;
+  }
+}
+@media screen and (max-height: 768px) {
+  .profie-info > div > *:last-child {
+    font-size: 12px;
   }
 }
 .profie-social {
